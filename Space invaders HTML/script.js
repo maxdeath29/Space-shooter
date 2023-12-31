@@ -1,6 +1,13 @@
 const canvas = document.getElementById("spaceCanvas");
 const ctx = canvas.getContext("2d");
 
+const background = new Image();
+background.scr = "images/space.png"
+
+function game() {
+  ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+}
+
 // Imagem da Nave Espacial
 const spaceShipImage = new Image();
 spaceShipImage.src = "assets/spaceship.png";
@@ -44,7 +51,7 @@ function drawBullets() {
 }
 
 const enemyImage = new Image();
-enemyImage.src = "assets/space-alien.png"; // Substitua "enemy.png" pelo caminho correto da sua imagem
+enemyImage.src = "assets/space-alien.png";
 
 function drawEnemy(enemy) {
     ctx.drawImage(enemyImage, enemy.x, enemy.y, 30, 30);
@@ -238,7 +245,7 @@ gameOverButton.addEventListener("click", () => {
 
 function init() {
   // Adicionar inimigo inicial
-  enemies.push({ x: Math.random() * (canvas.width - 30), y: 0, speed: 2 });
+  enemies.push({ x: Math.random() * (canvas.width - 30), y: 0, speed: 3 });
 }
 
 init();

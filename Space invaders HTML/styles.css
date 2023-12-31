@@ -1,64 +1,80 @@
 
-
-
 body {
-    background-image: url('assets/galaxy-wallpaper.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  background-image: url('assets/galaxy-wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
   
-  canvas {
-    display: block;
-    background: black;
-    position: relative;
-  }
+canvas {
+  display: block;
+  position: relative;
+}
   
-  .score-container {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 24px;
-  }
-  
-  .life-container {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    font-size: 24px;
-  }
-  
-  #startButton, #gameOverButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  #gameOverButton {
-    display: none;
-  }
+#canvasContainer {
+  position: relative;
+} 
 
-  #spaceShipImage {
-    display: none;
-  }
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+}
+
+.score-life-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.score-container,
+.life-container {
+  margin: 10px;
+  color: red;
+  padding: 0;
+  font-size: 30px;
+  font-family: 'Arial';
+}
+
+.score-life-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#startButton, #gameOverButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
   
-  .enemy-image {
-    display: none;
-  }
+#gameOverButton {
+  display: none;
+}
+
+#spaceShipImage {
+  display: none;
+}
+  
+.enemy-image {
+  display: none;
+}
+
